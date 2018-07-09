@@ -3,6 +3,8 @@
 
 [Original Gist](https://gist.github.com/pomke/ebf45e82e9d08c36c9cd926f21ae0e73)
 
+[Published on Github Pages here](https://shahrene.github.io/iflix-coding-challenge/)
+
 **The Task**
 
 Create a web component that submits a 1-5 star rating for iflix titles. Display average rating on screen once the user has rated.
