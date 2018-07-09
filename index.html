@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal Dialog Popup Demo</title>
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One|Russo+One" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>iflix</h1>
+  </header>
+
+  <h3>Some Awesome Video Title</h3>
+  
+  <div class="container">
+    <img src="images/Videoscreen.png" alt="video image">
+    <div class="centered">Thank you for watching!</div>
+  </div>
+
+  <h3>Average Rating: <span class="avg-rating"> </span></h3>
+
+    <button class="open">Rate This Video</button>
+
+      <div class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Your Star Rating</h2>
+          <div class="stars-div">
+            <ul class="stars-list">
+              <input type="radio" id="st5" name="rating" value="5" onclick="countCheckedStars(); closeAfterSubmit();" />
+                <label for="st5" title="5 stars"></label>
+              <input type="radio" id="st4" name="rating" value="4" onclick="countCheckedStars(); closeAfterSubmit();" />
+                <label for="st4" title="4 stars"></label>
+              <input type="radio" id="st3" name="rating" value="3" onclick="countCheckedStars(); closeAfterSubmit();" />
+                <label for="st3" title="3 stars"></label>
+              <input type="radio" id="st2" name="rating" value="2" onclick="countCheckedStars(); closeAfterSubmit();" />
+                <label for="st2" title="2 stars"></label>
+              <input type="radio" id="st1" name="rating" value="1" onclick="countCheckedStars(); closeAfterSubmit();" />
+                <label for="st1" title="1 star"></label>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+  <script src="demo.js" ></script>
+</body>
+
+</html>

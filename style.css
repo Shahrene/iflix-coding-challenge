@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(images/banner1.jpg);
+    padding: 10px;
+    height: 130px;
+    background-size: 670px;
+    background-repeat: repeat-x;
+}
+
+h1 {
+    font-family: 'Bowlby One', cursive;
+    font-size: 3em;
+    color: white;
+    margin-top: 10px;
+    text-shadow: 2px 2px #7f7f7f;
+}
+
+h2 {
+    margin-left: 8%;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+}
+
+h3 {
+    margin-left: 1%;
+    margin-top: 1%;
+    font-family: 'Russo One', sans-serif;
+}
+
+.container {
+    position: relative;
+}
+/*text over image*/
+.centered {
+    position: absolute;
+    font-family: Tahoma, sans-serif;
+    color: white;
+    top: 50%;
+    left: 330px;
+    transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);
+}
+
+img {
+    margin-left: 1%;
+    box-shadow: 0 2px 2px 0 #7f7f7f;
+}
+
+button {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1em;
+    padding: 1%;
+    margin: 1%;
+    background-color: #ff0000;
+    color: white;
+    border: 2px solid #ff0000;
+    text-shadow: 1px 1px #7f7f7f;
+    cursor: pointer;
+    transition-duration: 0.4s; -o-transition-duration: 0.4s; -webkit-transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1); -ms-transform: scale(1.1); -webkit-transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; -o-transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; -webkit-transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0); -ms-transform: scale(1.0); -webkit-transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; -o-transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; -webkit-transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.stars-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.stars-list:not(:checked) > input {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.stars-list:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 250%;
+    line-height: 1.2;
+    color: lightgrey;
+    text-shadow: 1px 1px #7f7f7f;
+}
+/* selects all list elements with label and gives the star content */
+.stars-list:not(:checked) > label:before {
+   content: '★ ';
+}
+/* selects all list elements with checked input and labels that preceed, a gold color and keeps them active */
+.stars-list > input:checked ~ label {
+   color: gold;
+   text-shadow: 1px 1px #c60;
+}
+/* selects all unchecked stars and gives the label a gold color and keeps preceeding labels gold on hover */
+.stars-list:not(:checked) > label:hover,
+.stars-list:not(:checked) > label:hover ~ label {
+   color: gold;
+}
+/* selects stars that have been hovered on and checked these additional attributes */
+.stars-list > input:checked + label:hover,
+.stars-list > input:checked + label:hover ~ label,
+.stars-list > input:checked ~ label:hover,
+.stars-list > input:checked ~ label:hover ~ label,
+.stars-list > label:hover ~ input:checked ~ label {
+   color: gold;
+   text-shadow: 2px 2px #e21d0b;
+}
+/* gives the stars these additional attributes when active */
+.stars-list > label:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
